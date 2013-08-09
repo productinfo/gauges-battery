@@ -8,53 +8,58 @@
 
 #import "ViewController.h"
 #import "UIColor+Hex.h"
-#import <ShinobiGauges/ShinobiGauges.h>
 
 @implementation ViewController
 {
-    SGauge *gauge;
+    SGaugeRadial *gauge;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    gauge = [[SGaugeLinear alloc] initWithFrame:CGRectMake(0, 0, 400, 150) fromMinimum:@0 toMaximum:@100];
+    gauge = [[SGaugeRadial alloc] initWithFrame:CGRectMake(0, 0, 300, 300) fromMinimum:@0 toMaximum:@100];
     gauge.center = self.view.center;
     gauge.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.view addSubview:gauge];
+
+    //Set the angle
+    gauge.arcAngleStart = -M_PI_4 * 3;
+    gauge.arcAngleEnd = M_PI_4 * 3;
     
-    //Background
-    gauge.style.primaryBackgroundColor = [UIColor colorWithWhite:1 alpha:1];
-    gauge.style.secondaryBackgroundColor = [UIColor colorWithWhite:0 alpha:1];
-    gauge.style.innerRadiusProportion = 1;
-    gauge.style.bevelWidth = 5;
+    //Gauge style
+    gauge.style.borderIsFullCircle = YES;
+    gauge.style.innerBackgroundColor = [UIColor colorWithHexString:@"66D8F2" andAlpha:1];
+    gauge.style.outerBackgroundColor = [UIColor colorWithHexString:@"17205C" andAlpha:1];
     
-    //Apply range colors
-    gauge.qualitativeRanges = @[[SGaugeQualitativeRange rangeWithMinimum:@0 withMaximum:@100 withColor:[UIColor colorWithHexString:@"00ED2F" andAlpha:0.6]]];
-    gauge.style.qualitativeRangeBorderColor = [UIColor clearColor];
-    gauge.style.qualitativeInnerRadius = 0;
-    gauge.style.qualitativeOuterRadius = 1;
- 
-    //Remove needle from view
-    gauge.style.needleBorderWidth = 0;
-    gauge.style.knobBorderWidth = 0;
-    gauge.style.needleWidth = 0;
+    //Axis style
+    gauge.style.tickBaselinePosition = 0.7;
+    gauge.style.tickLabelColor = [UIColor colorWithHexString:@"3E9C62" andAlpha:1];
+    gauge.style.tickLabelFont = [UIFont fontWithName:@"AmericanTypewriter-Bold" size:18];
+
+    //Bevel style
+    gauge.style.bevelWidth = 20;
+    gauge.style.bevelPrimaryColor = [UIColor colorWithHexString:@"232B5E" andAlpha:1];
+    gauge.style.bevelSecondaryColor = [UIColor colorWithHexString:@"5563BD" andAlpha:1];
     
-    //Remove axis from view
-    gauge.style.showTickLabels = NO;
-    gauge.style.majorTickSize = CGSizeZero;
-    gauge.style.minorTickSize = CGSizeZero;
-    
-    //Clip the range at the needle
-    gauge.colorActiveSegment = YES;
-    
+    //Needle style
+    gauge.style.needleColor = [UIColor colorWithHexString:@"3FE0BD" andAlpha:1];
+    gauge.style.needleWidth = 10;
+    gauge.style.needleLength = 0.75;
+    gauge.style.knobColor = [UIColor colorWithHexString:@"5563BD" andAlpha:1];
+     
     //Observe the battery level
     [[UIDevice currentDevice] setBatteryMonitoringEnabled:YES];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateBatteryStatus) name:UIDeviceBatteryLevelDidChangeNotification object:nil];
     
     //Trigger the value for the initial render
     [self updateBatteryStatus];
+    
+    //Add decorative lightning bolt
+    UIImage *boltImage = [UIImage imageNamed:@"lightning.png"];
+    UIImageView *bolt = [[UIImageView alloc] initWithImage:boltImage];
+    bolt.center = CGPointMake(155, 120);
+    [gauge addSubview:bolt];
 }
 
 -(void)updateBatteryStatus
