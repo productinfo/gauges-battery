@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIColor+Hex.h"
+#import <ShinobiGauges/ShinobiGauges.h>
 
 @implementation ViewController
 {
