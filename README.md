@@ -1,7 +1,7 @@
 Shinobi Gauges Battery Indicator (Objective-C)
 =====================
 
-An example project, creating a Battery indicator using ShinobiGauges. This is the final product of the blog post on http://www.shinobicontrols.com/blog/posts/2013/08/12/creating-a-battery-gauge/
+An example project, creating a Battery indicator using ShinobiGauges. This is the final product of the blog post at http://www.shinobicontrols.com/blog/posts/2013/08/19/creating-a-battery-gauge/
 
 ![Screenshot](screenshot.png?raw=true)
 
