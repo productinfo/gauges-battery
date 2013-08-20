@@ -8,7 +8,7 @@ An example project, creating a Battery indicator using ShinobiGauges. This is th
 Building the project
 ------------------
 
-In order to build this project you'll need a copy of ShinobiGauges. If you don't have it yet, you can download a free trial from the [ShinobiLabs website](www.shinobicontrols.com).
+In order to build this project you'll need a copy of ShinobiGauges. If you don't have it yet, you can download a free trial from the [ShinobiLabs website](http://www.shinobicontrols.com/shinobilabs/).
 
 Once you've downloaded and unzipped ShinobiGauges, open up the project in Xcode, and drag ShinobiGauges.framework from the finder into Xcode's 'frameworks' group, and Xcode will sort out all the header and linker paths for you.
 
