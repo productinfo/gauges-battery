@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47002ACA182D4E440064082D /* ShinobiGauges.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47002AC9182D4E440064082D /* ShinobiGauges.framework */; };
+		47002ACC182D4E480064082D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47002ACB182D4E480064082D /* QuartzCore.framework */; };
+		47002ACE182D4E4C0064082D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47002ACD182D4E4C0064082D /* Security.framework */; };
 		4700E8E117B4DA92004C4014 /* lightning.png in Resources */ = {isa = PBXBuildFile; fileRef = 4700E8E017B4DA92004C4014 /* lightning.png */; };
 		47B5D3DF17B27ED100F1D148 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B5D3DE17B27ED100F1D148 /* UIKit.framework */; };
 		47B5D3E117B27ED100F1D148 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B5D3E017B27ED100F1D148 /* Foundation.framework */; };
@@ -20,11 +23,13 @@
 		47B5D3F817B27ED100F1D148 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B5D3F717B27ED100F1D148 /* ViewController.m */; };
 		47B5D3FB17B27ED100F1D148 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B5D3F917B27ED100F1D148 /* ViewController_iPhone.xib */; };
 		47B5D3FE17B27ED100F1D148 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B5D3FC17B27ED100F1D148 /* ViewController_iPad.xib */; };
-		47B5D40517B27EE200F1D148 /* ShinobiGauges.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B5D40417B27EE200F1D148 /* ShinobiGauges.framework */; };
 		47B5D40817B280F800F1D148 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B5D40717B280F800F1D148 /* UIColor+Hex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47002AC9182D4E440064082D /* ShinobiGauges.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShinobiGauges.framework; path = Library/Frameworks/ShinobiGauges.framework; sourceTree = DEVELOPER_DIR; };
+		47002ACB182D4E480064082D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		47002ACD182D4E4C0064082D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4700E8E017B4DA92004C4014 /* lightning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightning.png; sourceTree = "<group>"; };
 		47B5D3DB17B27ED100F1D148 /* BatteryGauge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatteryGauge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B5D3DE17B27ED100F1D148 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -43,7 +48,6 @@
 		47B5D3F717B27ED100F1D148 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		47B5D3FA17B27ED100F1D148 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		47B5D3FD17B27ED100F1D148 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
-		47B5D40417B27EE200F1D148 /* ShinobiGauges.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiGauges.framework; sourceTree = "<group>"; };
 		47B5D40617B280F800F1D148 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		47B5D40717B280F800F1D148 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,10 +57,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47002ACE182D4E4C0064082D /* Security.framework in Frameworks */,
+				47002ACC182D4E480064082D /* QuartzCore.framework in Frameworks */,
+				47002ACA182D4E440064082D /* ShinobiGauges.framework in Frameworks */,
 				47B5D3DF17B27ED100F1D148 /* UIKit.framework in Frameworks */,
 				47B5D3E117B27ED100F1D148 /* Foundation.framework in Frameworks */,
 				47B5D3E317B27ED100F1D148 /* CoreGraphics.framework in Frameworks */,
-				47B5D40517B27EE200F1D148 /* ShinobiGauges.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +89,9 @@
 		47B5D3DD17B27ED100F1D148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				47B5D40417B27EE200F1D148 /* ShinobiGauges.framework */,
+				47002ACD182D4E4C0064082D /* Security.framework */,
+				47002ACB182D4E480064082D /* QuartzCore.framework */,
+				47002AC9182D4E440064082D /* ShinobiGauges.framework */,
 				47B5D3DE17B27ED100F1D148 /* UIKit.framework */,
 				47B5D3E017B27ED100F1D148 /* Foundation.framework */,
 				47B5D3E217B27ED100F1D148 /* CoreGraphics.framework */,
@@ -290,7 +298,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BatteryGauge/BatteryGauge-Prefix.pch";
@@ -305,7 +314,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BatteryGauge/BatteryGauge-Prefix.pch";
