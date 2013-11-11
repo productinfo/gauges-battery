@@ -18,6 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [ShinobiGauges setLicenseKey:@""]; // Add license key here
+    
 	// Do any additional setup after loading the view, typically from a nib.
     gauge = [[SGaugeRadial alloc] initWithFrame:CGRectMake(0, 0, 300, 300) fromMinimum:@0 toMaximum:@100];
     gauge.style = [SGaugeLightStyle new];
